@@ -1,0 +1,226 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 3px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 80%;
+  margin: 10px;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(115deg,
+  #4fcf70, #fad648, #a676e5, #12bcfe, #44ce7b);
+  background-size: 50% 100%;
+  border-radius: inherit;
+}
+
+.button:hover::before {
+  animation: animate_border .75s linear infinite;
+}
+
+.button span {
+  display: block;
+  background-color: #383838;
+  padding: 13px 20px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes animate_border {
+  to { transform: translateX(-50%) }
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background: #383838;
+  padding: 10px;
+  border-radius: 10px
+}
+
+.button span:hover {
+  background: #262626;
+  transition: .5s;
+  text-shadow: 0 0 3px white;
+}
+
+body {
+  font: 15pt monospace;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+ul li a .fa {
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  transition: .5s;
+  padding-right: 14px;
+}
+
+ul li a span {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 4px;
+  transition: .5s;
+}
+
+ul li a {
+  text-decoration: none;
+  display: absolute;
+  display: block;
+  width: 210px;
+  height: 80px;
+  background: #fff;
+  text-align: left;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, .5);
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #B1B1B1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #B1B1B1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, .5);
+}
+
+ul li:hover .fa {
+  color: #fff;
+}
+ul li:hover span {
+  color: #fff;
+}
+
+ul li:hover:nth-child(1) a {
+  background: #3B5998;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(1) a:before {
+  background: #365492;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(1) a:after {
+  background: #4A69AD;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(2) a {
+  background: #00ACED;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(2) a:before {
+  background: #097AA5;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(2) a:after {
+  background: #53B9E0;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(3) a {
+  background: #DD4B39;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(3) a:before {
+  background: #B33A2B;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(3) a:after {
+  background: #E66A5A;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(4) a {
+  background: #E4405F;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(4) a:before {
+  background: #D81C3F;
+  transition: .5s;
+}
+
+ul li:hover:nth-child(4) a:after {
+  background: #E46880;
+  transition: .5s;
+}
+
+.typing-demo {
+  width: 20ch;
+  animation: typing 5s steps(20), blink .25s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  color: white;
+  margin: 20px;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
